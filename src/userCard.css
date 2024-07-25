@@ -19,8 +19,8 @@
 }
 
 .avatar-placeholder {
-  width: 100px;
-  height: 100px;
+  width: 10px;
+  height: 10px;
   background-color: #f0f0f0;
   border-radius: 50%;
   display: flex;
