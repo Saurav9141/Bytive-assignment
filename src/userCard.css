@@ -19,16 +19,21 @@
 }
 
 .avatar-placeholder {
-  width: 10px;
-  height: 10px;
+  width: auto; /* Fixed width */
+  height: auto; /* Fixed height */
   background-color: #f0f0f0;
-  border-radius: 50%;
+  /* border-radius: 50%; */
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto 16px;
-  font-size: 12px;
-  color: #999;
+  overflow: hidden; /* Ensure the image does not overflow */
+}
+
+.avatar-placeholder img {
+  width: 100%; /* Make sure the image covers the container */
+  height: 100%; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensure the image covers the container without distortion */
 }
 
 .user-info {
@@ -164,18 +169,10 @@
   color: #fff;
 }
 
-/* .modal-buttons button[type="button"] {
-  background-color: #fff;
-  border: #ccc;
-  border-width: 10px;
-  color: #333;
-} */
-
 .modal-buttons button[type="button"] {
   background-color: #fff;
-  border: 2px solid #ccc; /* Updated the border to 2px for better appearance */
+  border: 2px solid #ccc;
   color: #333;
-  /* padding: 10px 20px; */
   cursor: pointer;
   border-radius: 5px;
 }
@@ -184,14 +181,10 @@
   color: #007bff;
   border: 2px solid #007bff;
 }
-.icon.liked {
-  color: red;
-}
 
 .sideBy {
   display: flex;
   align-items: center;
-  padding-left: 100px;
   gap: 6px;
 }
 
